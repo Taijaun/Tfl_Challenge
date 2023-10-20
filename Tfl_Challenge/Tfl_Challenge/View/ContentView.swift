@@ -14,7 +14,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             List(tubeListViewModel.tubeList) { tube in
-                Text(tube.name)
+                TubeListCell(tubeName: tube.name, tubeStatus: tube.lineStatuses[0].statusSeverityDescription)
             }
         }
         .onAppear {

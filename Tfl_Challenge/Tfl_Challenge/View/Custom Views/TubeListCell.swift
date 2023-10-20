@@ -8,12 +8,16 @@
 import SwiftUI
 
 struct TubeListCell: View {
+    // Make background change depending on tube name?
+    // Or make small square depending on tube name
+    // Digimon project has example
     let tubeName: String
     let tubeStatus: String
     
     var body: some View {
         HStack{
             Text(tubeName)
+            Spacer()
             Text(tubeStatus)
         }
     }
