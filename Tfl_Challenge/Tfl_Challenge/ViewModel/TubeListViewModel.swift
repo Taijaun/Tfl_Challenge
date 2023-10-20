@@ -7,6 +7,7 @@
 
 import Foundation
 
+@MainActor
 class TubeListViewModel: ObservableObject{
     @Published var tubeList = [Tube]()
     
