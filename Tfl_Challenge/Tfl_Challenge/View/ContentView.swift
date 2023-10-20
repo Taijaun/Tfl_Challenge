@@ -8,17 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var tubeListViewModel: TubeListViewModel
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            List(tubeListViewModel.tubeList) { tube in
+                Text(tube.name)
+            }
         }
-        .padding()
+        .onAppear {
+            Task{
+                await tubeListViewModel.getTubeList(urlString: "https://api.tfl.gov.uk/Line/Mode/Tube/Status")
+            }
+        }
     }
+    
 }
 
-#Preview {
-    ContentView()
-}
+//#Preview {
+//    ContentView(tubeListViewModel: TubeListViewModel(networkManager: NetworkManager()))
+//}

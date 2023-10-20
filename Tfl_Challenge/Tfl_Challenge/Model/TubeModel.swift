@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+struct Tube: Codable, Identifiable{
+    var id, name: String
+    var lineStatuses: [lineStatus]
+}
+
+struct lineStatus: Codable, Identifiable{
+    var id, statusSeverity: Int
+    var statusSeverityDescription: String
+}
