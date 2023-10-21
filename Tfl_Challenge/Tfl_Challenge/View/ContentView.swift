@@ -19,7 +19,7 @@ struct ContentView: View {
         }
         .onAppear {
             Task{
-                await tubeListViewModel.getTubeList(urlString: "https://api.tfl.gov.uk/Line/Mode/Tube/Status")
+                await tubeListViewModel.getTubeList(urlString: Constants.tflEndpoint)
             }
         }
     }
