@@ -20,6 +20,7 @@
 		DCACAA3A2AE2CDEE0034DC38 /* TubeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCACAA392AE2CDEE0034DC38 /* TubeListViewModel.swift */; };
 		DCACAA3D2AE2D4270034DC38 /* TubeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCACAA3C2AE2D4270034DC38 /* TubeListCell.swift */; };
 		DCACAA3F2AE4451C0034DC38 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCACAA3E2AE4451C0034DC38 /* Constants.swift */; };
+		DCACAA422AE448A20034DC38 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCACAA412AE448A20034DC38 /* ColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		DCACAA392AE2CDEE0034DC38 /* TubeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TubeListViewModel.swift; sourceTree = "<group>"; };
 		DCACAA3C2AE2D4270034DC38 /* TubeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TubeListCell.swift; sourceTree = "<group>"; };
 		DCACAA3E2AE4451C0034DC38 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DCACAA412AE448A20034DC38 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 		DCACAA312AE2C7A10034DC38 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				DCACAA402AE4488F0034DC38 /* Extensions */,
 				DCACAA342AE2C8C00034DC38 /* Networking */,
 				DCACAA3E2AE4451C0034DC38 /* Constants.swift */,
 			);
@@ -191,6 +194,14 @@
 				DCACAA3C2AE2D4270034DC38 /* TubeListCell.swift */,
 			);
 			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		DCACAA402AE4488F0034DC38 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DCACAA412AE448A20034DC38 /* ColorExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,6 +337,7 @@
 				DCACAA072AE2C7700034DC38 /* ContentView.swift in Sources */,
 				DCACAA3D2AE2D4270034DC38 /* TubeListCell.swift in Sources */,
 				DCACAA362AE2C8E30034DC38 /* NetworkerProtocol.swift in Sources */,
+				DCACAA422AE448A20034DC38 /* ColorExtension.swift in Sources */,
 				DCACAA382AE2C8F10034DC38 /* NetworkManager.swift in Sources */,
 				DCACAA332AE2C8180034DC38 /* TubeModel.swift in Sources */,
 				DCACAA3A2AE2CDEE0034DC38 /* TubeListViewModel.swift in Sources */,
