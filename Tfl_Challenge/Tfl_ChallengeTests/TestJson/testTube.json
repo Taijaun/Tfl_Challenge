@@ -1,0 +1,17 @@
+
+
+
+[
+    {
+        "id": "bakerloo",
+        "name": "bakerloo",
+        "lineStatuses": [
+            "id": 0,
+            "statusSeverity": 10
+            "StatusSeverityDescription": "Good Service"
+        ]
+    }
+    
+    
+    
+]

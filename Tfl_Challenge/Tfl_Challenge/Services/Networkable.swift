@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol NetworkerProtocol {
-    func callTflApi(url: URL) async throws -> Data
+protocol Networkable {
+    func request<T: Decodable>(url: String, modelType: T.Type) async throws -> T
 }

@@ -7,12 +7,17 @@
 
 import Foundation
 
-struct Tube: Codable, Identifiable{
-    var id, name: String
-    var lineStatuses: [lineStatus]
+struct Tube: Decodable {
+    let id: String
+    let name: String
+    let lineStatuses: [LineStatus]
+}
+extension Tube: Identifiable {}
+
+struct LineStatus: Decodable {
+    let id: Int
+    let statusSeverity: Int
+    let statusSeverityDescription: String
 }
 
-struct lineStatus: Codable, Identifiable{
-    var id, statusSeverity: Int
-    var statusSeverityDescription: String
-}
+extension LineStatus: Identifiable {}

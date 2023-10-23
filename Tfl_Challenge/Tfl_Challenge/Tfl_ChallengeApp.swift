@@ -11,7 +11,7 @@ import SwiftUI
 struct Tfl_ChallengeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(tubeListViewModel: TubeListViewModel(networkManager: NetworkManager()))
+            TubeListView(tubeListViewModel: TubeListViewModel(networkManager: NetworkManager()))
         }
     }
 }

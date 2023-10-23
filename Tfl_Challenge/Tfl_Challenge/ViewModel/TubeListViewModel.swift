@@ -7,28 +7,28 @@
 
 import Foundation
 
-@MainActor
-class TubeListViewModel: ObservableObject{
-    @Published var tubeList = [Tube]()
+enum ViewState {
+    case load(tubes: [Tube])
+    case error
+}
+
+final class TubeListViewModel: ObservableObject {
+
+    private var tubeList = [Tube]()
+    private let networkManager: Networkable
     
-    var networkManager: NetworkerProtocol
+    @Published var viewSate = ViewState.load(tubes: [])
     
-    init( networkManager: NetworkerProtocol) {
+    init(networkManager: Networkable = NetworkManager()) {
         self.networkManager = networkManager
     }
     
-    func getTubeList(urlString: String) async {
-        guard let url = URL(string: urlString) else {
-            return
-        }
-        
+    @MainActor func getTubes(url: String) async {
         do {
-            let data = try await self.networkManager.callTflApi(url: url)
-            let tubeData = try JSONDecoder().decode([Tube].self, from: data)
-            self.tubeList = tubeData
-            
-        } catch let error {
-            return
+            tubeList = try await networkManager.request(url:url, modelType: [Tube].self)
+            viewSate = .load(tubes: tubeList)
+        } catch {
+            viewSate = .error
         }
     }
 }
