@@ -25,7 +25,6 @@
 		DCACAA462AE6B7620034DC38 /* FakeNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCACAA452AE6B7620034DC38 /* FakeNetworkManager.swift */; };
 		DCACAA482AE6B7D90034DC38 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCACAA472AE6B7D80034DC38 /* NetworkingError.swift */; };
 		DCACAA4A2AE6B8410034DC38 /* testTube.json in Resources */ = {isa = PBXBuildFile; fileRef = DCACAA492AE6B8410034DC38 /* testTube.json */; };
-		DCACAA4C2AE6B9730034DC38 /* TubeListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCACAA4B2AE6B9730034DC38 /* TubeListViewModelTests.swift */; };
 		DCACAA4E2AE6BBC50034DC38 /* tubeEmpty.json in Resources */ = {isa = PBXBuildFile; fileRef = DCACAA4D2AE6BBC50034DC38 /* tubeEmpty.json */; };
 /* End PBXBuildFile section */
 
@@ -68,7 +67,6 @@
 		DCACAA452AE6B7620034DC38 /* FakeNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeNetworkManager.swift; sourceTree = "<group>"; };
 		DCACAA472AE6B7D80034DC38 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
 		DCACAA492AE6B8410034DC38 /* testTube.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testTube.json; sourceTree = "<group>"; };
-		DCACAA4B2AE6B9730034DC38 /* TubeListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TubeListViewModelTests.swift; sourceTree = "<group>"; };
 		DCACAA4D2AE6BBC50034DC38 /* tubeEmpty.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = tubeEmpty.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,7 +152,6 @@
 			children = (
 				DCACAA442AE6B7490034DC38 /* TubeListViewModelTests */,
 				DCACAA432AE6B7410034DC38 /* TestJson */,
-				DCACAA152AE2C7720034DC38 /* Tfl_ChallengeTests.swift */,
 				DCACAA452AE6B7620034DC38 /* FakeNetworkManager.swift */,
 			);
 			path = Tfl_ChallengeTests;
@@ -225,7 +222,7 @@
 		DCACAA442AE6B7490034DC38 /* TubeListViewModelTests */ = {
 			isa = PBXGroup;
 			children = (
-				DCACAA4B2AE6B9730034DC38 /* TubeListViewModelTests.swift */,
+				DCACAA152AE2C7720034DC38 /* Tfl_ChallengeTests.swift */,
 			);
 			path = TubeListViewModelTests;
 			sourceTree = "<group>";
@@ -380,7 +377,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCACAA4C2AE6B9730034DC38 /* TubeListViewModelTests.swift in Sources */,
 				DCACAA162AE2C7720034DC38 /* Tfl_ChallengeTests.swift in Sources */,
 				DCACAA462AE6B7620034DC38 /* FakeNetworkManager.swift in Sources */,
 			);

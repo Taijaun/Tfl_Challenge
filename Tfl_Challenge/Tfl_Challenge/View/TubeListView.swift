@@ -19,7 +19,9 @@ struct TubeListView: View {
                         ProgressView()
                     } else {
                         List(tubes){ tube in
-                            TubeListCell(tubeName: tube.name, tubeStatus: tube.lineStatuses[0].statusSeverityDescription)
+                            TubeListCell(tubeName: tube.name, tubeStatus: tube.lineStatuses.reduce("", { partialResult, status in
+                                return status.statusSeverityDescription.appending("\n")
+                            }))
                         }
                     }
                 case .error:

@@ -17,18 +17,30 @@ struct TubeListCell: View {
     @State var color: Color?
     
     var body: some View {
-        HStack{
-            Rectangle()
-                .fill(tubeName.getTubeLineColour())
-                .frame(width: 10, height: 30)
-            Text(tubeName)
-                .dynamicTypeSize(.accessibility1)
-            Spacer()
-            Text(tubeStatus)
-        }
+        
+        GeometryReader(content: { geometry in
+            HStack (alignment: .center) {
+                Rectangle()
+                    .fill(tubeName.getTubeLineColour())
+                    .frame(width: 5, height: geometry.size.height)
+                Text(tubeName).multilineTextAlignment(.center)
+                    .frame(maxWidth: geometry.size.width/2, maxHeight:.infinity,  alignment: .leading)
+                    .accessibilityValue(tubeName)
+                    .accessibilityLabel("Tube name")
+                    .accessibilityAddTraits(.isStaticText)
+                    .dynamicTypeSize(.accessibility5)
+                Text(tubeStatus)
+                    .frame(maxWidth: geometry.size.width/2, maxHeight:.infinity,  alignment: .trailing)
+                    .accessibilityValue(tubeStatus)
+                    .accessibilityLabel("Tube Status")
+                    .accessibilityAddTraits(.isStaticText)
+                    .dynamicTypeSize(.accessibility5)
+            }
+        })
+      
     }
 }
 
 #Preview {
-    TubeListCell(tubeName: "Bakerloo", tubeStatus: "Planned Closure")
+    TubeListCell(tubeName: "Bakerloo", tubeStatus: "Planned Closure \n Planned Closure \n Planned Closure \n")
 }

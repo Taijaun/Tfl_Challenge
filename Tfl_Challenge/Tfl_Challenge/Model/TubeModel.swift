@@ -21,3 +21,9 @@ struct LineStatus: Decodable {
 }
 
 extension LineStatus: Identifiable {}
+
+extension Tube {
+    static var mockTubes: [Tube] {
+        return [Tube(id:"", name: "", lineStatuses: [LineStatus(id:1, statusSeverity: 10, statusSeverityDescription:"")])]
+    }
+}

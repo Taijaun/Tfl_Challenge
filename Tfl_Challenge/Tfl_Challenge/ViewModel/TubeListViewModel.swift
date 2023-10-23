@@ -7,9 +7,20 @@
 
 import Foundation
 
-enum ViewState {
+enum ViewState: Equatable {
     case load(tubes: [Tube])
     case error
+    
+    static func == (lhs: ViewState, rhs: ViewState) -> Bool {
+        switch (lhs, rhs) {
+        case (.error, .error):
+            return true
+        case (.load(tubes: let lhsTubes), .load(tubes: let rhsTubes)):
+            return lhsTubes.count == rhsTubes.count
+        default:
+            return false
+        }
+    }
 }
 
 final class TubeListViewModel: ObservableObject {
