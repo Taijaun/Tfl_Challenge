@@ -1,6 +1,8 @@
 # Tfl_Challenge
 The task was to create a single page mobile application that shows the current status of all TFL tube lines.
 
+The UI Consists of a list which displays the name of the tube line, followed by it's current status.
+
 ## Installation ##
 Compatible with XCode 14 and above, Can be used with iphone and ipad devices running iOS 17 and later.
 
