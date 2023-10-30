@@ -21,5 +21,9 @@ The task instructions mentioned that it should be possible to configure the appl
 
 
 
+https://github.com/Taijaun/Tfl_Challenge/assets/68790661/1e5bfc52-11dd-4607-8eae-93dd5fcef8a9
+
+
+
 
 
