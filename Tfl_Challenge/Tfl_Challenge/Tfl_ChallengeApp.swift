@@ -12,6 +12,8 @@ struct Tfl_ChallengeApp: App {
     var body: some Scene {
         WindowGroup {
             TubeListView(tubeListViewModel: TubeListViewModel(networkManager: NetworkManager()))
+
         }
     }
 }
+

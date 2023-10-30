@@ -8,36 +8,28 @@
 import SwiftUI
 
 struct TubeListCell: View {
-    // Make background change depending on tube name?
-    // Or make small square depending on tube name
-    // Digimon project has example
+    
     let tubeName: String
     let tubeStatus: String
-    // take color as a hex string
-    @State var color: Color?
     
     var body: some View {
-        
-        GeometryReader(content: { geometry in
-            HStack (alignment: .center) {
-                Rectangle()
+        HStack {
+            Rectangle()
                     .fill(tubeName.getTubeLineColour())
-                    .frame(width: 5, height: geometry.size.height)
-                Text(tubeName).multilineTextAlignment(.center)
-                    .frame(maxWidth: geometry.size.width/2, maxHeight:.infinity,  alignment: .leading)
-                    .accessibilityValue(tubeName)
-                    .accessibilityLabel("Tube name")
-                    .accessibilityAddTraits(.isStaticText)
-                    .dynamicTypeSize(.accessibility5)
-                Text(tubeStatus)
-                    .frame(maxWidth: geometry.size.width/2, maxHeight:.infinity,  alignment: .trailing)
-                    .accessibilityValue(tubeStatus)
-                    .accessibilityLabel("Tube Status")
-                    .accessibilityAddTraits(.isStaticText)
-                    .dynamicTypeSize(.accessibility5)
-            }
-        })
-      
+                    .frame(width: 5, height: 70)
+            Text(tubeName)
+                .accessibilityHidden(true)
+                .frame(alignment: .leading)
+            Spacer()
+            Text(tubeStatus)
+                .frame(alignment: .trailing)
+        }
+        .accessibilityValue(tubeName)
+        .accessibilityLabel("Tube name")
+        .accessibilityAddTraits(.isStaticText)
+        .accessibilityHint("and status is \(tubeStatus)")
+        .environment(\.sizeCategory, .extraExtraExtraLarge)
+        
     }
 }
 
